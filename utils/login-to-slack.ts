@@ -20,8 +20,6 @@ export async function loginToSlack(page: Page) {
       console.log('Cookies set.')
 
       page.goto(process.env.SLACK_WORKSPACE_LOGIN_URL || "")
-
-      await page.waitForNavigation({ waitUntil: 'networkidle2' })
     }
     catch (error) {
       console.error(`${COOKIES_FILE_PATH} doesn't exist.`)

@@ -1,12 +1,11 @@
-const users = [];
+const users: any = [];
 
 async function getUsers(cursor = "") {
   const response = await fetch(
     `https://slack.com/api/users.list?cursor=${cursor}&pretty=1`,
     {
       headers: {
-        Authorization:
-          `Bearer ${process.env.SLACK_OAUTH_TOKEN}`,
+        Authorization: `Bearer ${process.env.SLACK_OAUTH_TOKEN}`,
       },
     },
   );

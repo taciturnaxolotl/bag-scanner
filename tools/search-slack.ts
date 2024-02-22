@@ -105,7 +105,7 @@ let fileName: string | undefined;
 if (saveToFile) {
   fileName = (await text({
     message: "Enter the name of the file to save the results to:",
-    initialValue: "search-results.json",
+    initialValue: "../results/search-results.json",
     validate(value) {
       // check for empty string and no file extension
       if (value.length === 0) return `Value is required!`;

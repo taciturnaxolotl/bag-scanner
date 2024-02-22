@@ -105,7 +105,7 @@ if (saveToFile) {
   fileName = Bun.file(
     (await text({
       message: "Enter the name of the file to save the results to:",
-      initialValue: "search-results",
+      initialValue: "search-results.json",
     })) as string,
   );
 } else {

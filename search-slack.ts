@@ -100,14 +100,20 @@ const query = await text({
 const saveToFile = await confirm({
   message: "Would you like to save the results to a file?",
 });
-let fileName: BunFile | undefined;
+let file: BunFile | undefined;
+let fileName: string | undefined;
 if (saveToFile) {
-  fileName = Bun.file(
-    (await text({
-      message: "Enter the name of the file to save the results to:",
-      initialValue: "search-results.json",
-    })) as string,
-  );
+  fileName = (await text({
+    message: "Enter the name of the file to save the results to:",
+    initialValue: "search-results.json",
+    validate(value) {
+      // check for empty string and no file extension
+      if (value.length === 0) return `Value is required!`;
+      if (!value.includes(".")) return `File extension is required!`;
+    },
+  })) as string;
+
+  file = Bun.file(fileName);
 } else {
   log.warn("Results will not be saved to a file.");
 }
@@ -119,11 +125,11 @@ if (!results) {
 } else if (results.length === 0) {
   log.warn(`No results found for the query ${String(query)}.`);
 } else {
-  note(`  ${results.length} results found for the query ${String(query)}.`);
+  note(`  ${results.length} results found for the query "${String(query)}".`);
 
-  if (fileName) {
-    Bun.write(fileName, results);
-    log.info(`Results saved to ${fileName}.json`);
+  if (file && fileName) {
+    Bun.write(file, JSON.stringify(results, null, 2));
+    log.info(`Results saved to ${fileName}`);
   }
 }
 

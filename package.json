@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
+    "@orama/orama": "^2.0.9",
     "@slack/bolt": "^3.17.1",
     "@types/puppeteer": "^7.0.4",
     "csv-parse": "^5.5.3",

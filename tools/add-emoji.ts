@@ -9,6 +9,7 @@ import {
   spinner,
 } from "@clack/prompts";
 import { create, insert, remove, search, searchVector } from "@orama/orama";
+import { temporaryWriteTask } from "tempy";
 
 type emoji = {
   id: string;
@@ -88,6 +89,72 @@ for (const id in emojiKitchenData.data) {
   });
 }
 
+async function bulkAdd(emojis: emoji[]) {
+  // download each combination emoji and add it to slack curl -F file=@blob-wand.png -F "initial_comment=test comment" -F channels=C064DNF64LU -H "Authorization: Bearer toekn" https://slack.com/api/files.upload
+
+  let searchEmoji: string;
+
+  if (emojis.length > 1) {
+    searchEmoji = (await select({
+      message: "Which emoji would you like to search for?",
+      options: emojis.map((emoji) => ({
+        value: emoji.id,
+        label: emoji.emoji,
+      })),
+    })) as string;
+  } else {
+    log.info(
+      "Only one emoji found, searching for combinations with that emoji",
+    );
+    searchEmoji = emojis[0].id;
+  }
+  const uploadingEmojis = spinner();
+
+  uploadingEmojis.start("Uploading emojis to Slack");
+
+  const total = emojiKitchenData.data[searchEmoji].combinations.length;
+
+  let count = 0;
+
+  for (const combinationEmoji of emojiKitchenData.data[searchEmoji]
+    .combinations) {
+    count++;
+
+    const emoji = await fetch(combinationEmoji.gStaticUrl);
+
+    const tempFile = temporaryWriteTask(
+      Buffer.from(await emoji.arrayBuffer()),
+      async (tempPath: string) => {
+        const formData = new FormData();
+        formData.append("file", Bun.file(tempPath));
+        formData.append("initial_comment", combinationEmoji.alt);
+        formData.append("channels", "C0P5NE354");
+
+        const response = await fetch("https://slack.com/api/files.upload", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Authorization: "Bearer " + process.env.SLACK_USER_TOKEN,
+          },
+        });
+
+        const data = await response.json();
+        if (data.ok) {
+          uploadingEmojis.message(
+            `Uploading emojis to Slack (${count}/${total})`,
+          );
+        } else {
+          log.error(data.error);
+        }
+      },
+    );
+
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+  }
+
+  uploadingEmojis.stop(`Uploaded ${total} emojis to Slack`);
+}
+
 async function searchBaseEmojis() {
   const searchTerm = await text({
     message: "What emoji would you like to search for?",
@@ -133,6 +200,10 @@ async function searchBaseEmojis() {
           label: "Search for emoji combinations",
         },
         {
+          value: "bulk-add",
+          label: "Bulk add emojis",
+        },
+        {
           value: "exit",
           label: "Exit",
         },
@@ -143,6 +214,8 @@ async function searchBaseEmojis() {
       await searchBaseEmojis();
     } else if (nextAction === "search-combination") {
       await searchCombinations(emojis);
+    } else if (nextAction === "bulk-add") {
+      await bulkAdd(emojis);
     }
   } else {
     const nextAction = await select({

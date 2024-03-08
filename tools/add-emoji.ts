@@ -342,19 +342,7 @@ async function searchCombinations(baseEmojis: emoji[]) {
 try {
   intro("Emoji Kitchen Tools");
 
-  const menu = await select({
-    message: "Pick an action.",
-    options: [
-      {
-        value: "search",
-        label: "Search for an emoji",
-      },
-    ],
-  });
-
-  if (menu === "search") {
-    await searchBaseEmojis();
-  }
+  await searchBaseEmojis();
 
   outro("Goodbye!");
 } catch (error) {

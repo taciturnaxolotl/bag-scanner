@@ -210,12 +210,20 @@ async function searchCombinations(baseEmojis: emoji[]) {
 
   const searchTerm = await text({
     message: "What combination emoji would you like to search for?",
-    placeholder: "Not sure",
+    placeholder: "If your not sure, just hit enter!",
     initialValue: "",
-    validate(value) {
-      if (value.length === 0) return `Value is required!`;
-    },
   });
+
+  if (searchTerm === "") {
+    log.success("Listing all combinations!");
+
+    for (const combinationEmoji of emojiKitchenData.data[searchEmoji]
+      .combinations) {
+      note(
+        `Combination Emoji found: ${combinationEmoji.alt}\nleft emoji: ${combinationEmoji.leftEmoji}\nright emoji: ${combinationEmoji.rightEmoji}`,
+      );
+    }
+  }
 
   const searchResult = await search(combinationEmojis, {
     term: searchTerm as string,

@@ -232,6 +232,8 @@ async function searchCombinations(baseEmojis: emoji[]) {
   if (searchResult.hits.length !== 0) {
     for (const hit of searchResult.hits) {
       note(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         `Combination Emoji found: ${hit.document.name}\nleft emoji: ${hit.document.leftEmoji}\nright emoji: ${hit.document.rightEmoji}`,
       );
     }

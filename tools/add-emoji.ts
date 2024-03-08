@@ -110,6 +110,8 @@ async function searchBaseEmojis() {
       emoji.id = hit.id;
       emojis.push(emoji);
     }
+  } else {
+    log.error("No emojis found");
   }
 
   for (const emoji of emojis) {
@@ -130,6 +132,10 @@ async function searchBaseEmojis() {
           value: "search-combination",
           label: "Search for emoji combinations",
         },
+        {
+          value: "exit",
+          label: "Exit",
+        },
       ],
     });
 
@@ -139,7 +145,23 @@ async function searchBaseEmojis() {
       await searchCombinations(emojis);
     }
   } else {
-    log.error("No emojis found");
+    const nextAction = await select({
+      message: "What would you like to do next?",
+      options: [
+        {
+          value: "search-base",
+          label: "Search for another base emoji",
+        },
+        {
+          value: "exit",
+          label: "Exit",
+        },
+      ],
+    });
+
+    if (nextAction === "search-base") {
+      await searchBaseEmojis();
+    }
   }
 }
 

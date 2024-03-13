@@ -68,7 +68,14 @@ async function waitForNewMessage(page: any) {
       await new Promise(r => setTimeout(r, 1000));
 
       await waitForNewMessage(page).then((message: any) => {
-        console.log('Received message: ' + message);
+        // regex for  @kieran ran /use pickaxe:You find a spot that looks promising and start breaking things apart with heavy swings of your pickaxe.Not much here, but you take a solid-looking rock as a consolation prize.What you got: x1  Rock (edited)
+        const regex = /What you (got|lost): x(\d+) (.*?)(?= What|$)(?= \(edited\)|$)?/g;
+
+        let match;
+
+        while ((match = regex.exec(message)) !== null) {
+          console.log(`${new Date().toLocaleString()} - ${match[1]} x${match[2]} ${match[3]} ${match[4] ? `${match[4]} x${match[5]} ${match[6]}` : ''}`);
+        }
       });
 
       i++;

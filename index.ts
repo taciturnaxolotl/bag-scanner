@@ -4,14 +4,14 @@ import { loginToSlack } from './utils/login-to-slack';
 async function waitForNewMessage(page: any) {
   return new Promise(async (resolve) => {
     const message = await page.evaluate(() => {
-        const messages = document.querySelectorAll('.p-rich_text_section');
-        const message = Array.from(messages).pop();
+      const messages = document.querySelectorAll('.p-rich_text_section');
+      const message = Array.from(messages).pop();
       if (message) {
         return message.textContent;
       }
     });
 
-    if (message && message.includes("@kieran") && message.includes("What you")){
+    if (message && message.includes("@kieran") && (message.includes('What you') && !message.includes(':loading-dots:'))) {
       resolve(message);
     } else {
       setTimeout(() => {
@@ -34,8 +34,10 @@ async function waitForNewMessage(page: any) {
       await page.click('[data-qa="message_input"]');
       await page.keyboard.type(command);
       await page.keyboard.press('Enter');
-      // await new Promise(r => setTimeout(r, 10000));
     }
+
+    await sendCommand('Mining time!');
+    await new Promise(r => setTimeout(r, 1000));
 
     for (let i = 0; i < 100; i++) {
       console.log('Sending command to use pickaxe #' + i);
@@ -43,10 +45,8 @@ async function waitForNewMessage(page: any) {
 
       await new Promise(r => setTimeout(r, 1000));
 
-      await waitForNewMessage(page).then((message) => {
-        console.log('New message with desired qualities:', message);
-      }).catch((error) => {
-        console.error('Error:', error);
+      await waitForNewMessage(page).then((message: any) => {
+        console.log('Received message: ' + message);
       });
     }
 

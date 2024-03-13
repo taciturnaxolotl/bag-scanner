@@ -22,7 +22,7 @@ async function waitForNewMessage(page: any) {
 
     if (message && ((message.includes('What you') || message.includes("nothing good here")) && !message.includes(':loading-dots:'))) {
       resolve(message);
-    } else if (start + 30000 < Date.now() {
+    } else if (start + 30000 < Date.now()) {
       resolve('timeout after 30 seconds of waiting for a new message.');
     } else {
       setTimeout(() => {
@@ -57,6 +57,8 @@ async function waitForNewMessage(page: any) {
     process.on('SIGINT', () => {
       console.log('Received SIGINT. Stopping...');
       running = false;
+
+      browser.close();
     });
 
     while (true) {
@@ -72,9 +74,8 @@ async function waitForNewMessage(page: any) {
       i++;
     }
 
-    // Close the browser when done
-    await browser.close();
   } catch (error) {
+    // handle requesting main frame to early error
     throw error
   }
 })();

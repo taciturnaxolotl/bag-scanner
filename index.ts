@@ -5,13 +5,20 @@ async function waitForNewMessage(page: any) {
   return new Promise(async (resolve) => {
     const message = await page.evaluate(() => {
       const messages = document.querySelectorAll('.p-rich_text_section');
-      const message = Array.from(messages).pop();
+      let message = Array.from(messages).pop();
       if (message) {
+        // find the last message that contains @kieran
+        for (let i = messages.length - 1; i >= 0; i--) {
+          if (messages[i].textContent?.includes('@kieran ran /use')) {
+            message = messages[i];
+            break;
+          }
+        }
         return message.textContent;
       }
     });
 
-    if (message && message.includes("@kieran") && (message.includes('What you') && !message.includes(':loading-dots:'))) {
+    if (message && ((message.includes('What you') || message.includes("nothing good here")) && !message.includes(':loading-dots:'))) {
       resolve(message);
     } else {
       setTimeout(() => {

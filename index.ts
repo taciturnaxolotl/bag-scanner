@@ -1,38 +1,25 @@
 import puppeteer from 'puppeteer';
-import fs from 'fs';
-import path from 'path';
-import { parse } from 'csv-parse'
 import { loginToSlack } from './utils/login-to-slack';
 
-// type hackclubers = {
-//   name: string;
-//   whatIDo: string;
-//   accountType: string;
-//   accountCreated: string;
-//   daysActive: string;
-//   messagesPosted: string;
-// };
+async function waitForNewMessage(page: any) {
+  return new Promise(async (resolve) => {
+    const message = await page.evaluate(() => {
+        const messages = document.querySelectorAll('.p-rich_text_section');
+        const message = Array.from(messages).pop();
+      if (message) {
+        return message.textContent;
+      }
+    });
 
-// const hackclubers: hackclubers[] = [];
-// (() => {
-//   const csvFilePath = path.resolve(import.meta.dir, 'hackclub-users.csv');
-
-//   const headers = ['name', 'whatIDo', 'accountType', 'accountCreated', 'daysActive', 'messagesPosted'];
-
-//   const fileContent = fs.readFileSync(csvFilePath, { encoding: 'utf-8' });
-
-//   parse(fileContent, {
-//     delimiter: ',',
-//     columns: headers,
-//   }, (error, result: hackclubers[]) => {
-//     if (error) {
-//       console.error(error);
-//     }
-//     console.log("Result", result);
-//     hackclubers.push(...result);
-//   });
-// })();
-
+    if (message && message.includes("@kieran") && message.includes("What you")){
+      resolve(message);
+    } else {
+      setTimeout(() => {
+        resolve(waitForNewMessage(page));
+      }, 1000);
+    }
+  });
+}
 
 (async () => {
   try {
@@ -47,16 +34,20 @@ import { loginToSlack } from './utils/login-to-slack';
       await page.click('[data-qa="message_input"]');
       await page.keyboard.type(command);
       await page.keyboard.press('Enter');
-      await page.waitForTimeout(8000);
+      // await new Promise(r => setTimeout(r, 10000));
     }
 
-    // for (let i = 0; i < hackclubers.length; i++) {
-    //   const { name } = hackclubers[i];
-    //   await sendCommand('/bag @' + name);
-    // }
     for (let i = 0; i < 100; i++) {
       console.log('Sending command to use pickaxe #' + i);
       await sendCommand('/use pickaxe');
+
+      await new Promise(r => setTimeout(r, 1000));
+
+      await waitForNewMessage(page).then((message) => {
+        console.log('New message with desired qualities:', message);
+      }).catch((error) => {
+        console.error('Error:', error);
+      });
     }
 
     await browser.close();

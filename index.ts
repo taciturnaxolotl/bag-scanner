@@ -1,9 +1,7 @@
 import puppeteer from 'puppeteer';
 import { loginToSlack } from './utils/login-to-slack';
 
-async function waitForNewMessage(page: any) {
-  const start = Date.now();
-
+async function waitForNewMessage(page: any, start: number) {
   return new Promise(async (resolve) => {
     const message = await page.evaluate(() => {
       const messages = document.querySelectorAll('.p-rich_text_section');
@@ -20,13 +18,13 @@ async function waitForNewMessage(page: any) {
       }
     });
 
-    if (message && ((message.includes('What you') || message.includes("nothing good here")) && !message.includes(':loading-dots:'))) {
+    if (message && ((message.includes('What you') || message.includes("nothing good here") || message.includes("Uncertainty is a part of life")) && !message.includes(':loading-dots:'))) {
       resolve(message);
-    } else if (start + 30000 < Date.now()) {
+    } else if (start + 10000 < Date.now()) {
       resolve('timeout after 30 seconds of waiting for a new message.');
     } else {
       setTimeout(() => {
-        resolve(waitForNewMessage(page));
+        resolve(waitForNewMessage(page, start));
       }, 1000);
     }
   });
@@ -47,7 +45,7 @@ async function waitForNewMessage(page: any) {
       await page.keyboard.press('Enter');
     }
 
-    await sendCommand('Mining time!');
+    // await sendCommand('Mining time!');
     await new Promise(r => setTimeout(r, 2000));
 
     let i = 0;
@@ -67,14 +65,16 @@ async function waitForNewMessage(page: any) {
 
       await new Promise(r => setTimeout(r, 1000));
 
-      await waitForNewMessage(page).then((message: any) => {
+      await waitForNewMessage(page, Date.now()).then((message: any) => {
         // regex for  @kieran ran /use pickaxe:You find a spot that looks promising and start breaking things apart with heavy swings of your pickaxe.Not much here, but you take a solid-looking rock as a consolation prize.What you got: x1  Rock (edited)
         const regex = /What you (got|lost): x(\d+) (.*?)(?= What|$)(?= \(edited\)|$)?/g;
 
-        let match;
+        const match = regex.exec(message);
 
-        while ((match = regex.exec(message)) !== null) {
+        if (match !== null) {
           console.log(`${new Date().toLocaleString()} - ${match[1]} x${match[2]} ${match[3]} ${match[4] ? `${match[4]} x${match[5]} ${match[6]}` : ''}`);
+        } else {
+          console.log(message);
         }
       });
 

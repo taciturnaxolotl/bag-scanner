@@ -19,7 +19,7 @@ export async function loginToSlack(page: Page) {
       }
       console.log('Cookies set.')
 
-      await page.goto("https://app.slack.com/client/T0266FRGM/C06KJDF425N")
+      await page.goto("https://app.slack.com/client/T0266FRGM/C06GC9FQLQP")
     }
     catch (error) {
       console.error(`${COOKIES_FILE_PATH} doesn't exist.`)
@@ -33,8 +33,8 @@ export async function loginToSlack(page: Page) {
 }
 
 async function loginAndSaveCookies(page: Page) {
-  page.goto("https://hackclub.slack.com/?redir=%2Fgantry%2Fauth%3Fapp%3Dclient%26lc%3D1710353161%26return_to%3D%252Fclient%252FT0266FRGM%252FC06KJDF425N%26teams%3D")
-  
+  page.goto("https://hackclub.slack.com/?redir=%2Fgantry%2Fauth%3Fapp%3Dclient%26lc%3D1710353161%26return_to%3D%252Fclient%252FT0266FRGM%252FC06GC9FQLQP%26teams%3D")
+
   console.log("nav 1 complete")
 
   await page.waitForNavigation({ waitUntil: 'networkidle0' })

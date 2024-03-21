@@ -3,20 +3,6 @@ import { loginToSlack } from './utils/login-to-slack';
 
 const items = [":-aftermash-complete-series:", ":-aftermash-season-1:", ":-aftermash-season-2:", ":-aluminum-ore:", ":-aluminum:", ":-anvil:", ":-apple:", ":-axe:", ":-banana:", ":-carrot:", ":-coal:", ":-coconut:", ":-cool-shoes:", ":-diamond:", ":-dinoisseur-challenge-coin:", ":-emerald:", ":-fancy-pants:", ":-fashionable-shirt:", ":-fish:", ":-fish-hat:", ":-furnace:", ":-gold-ore:", ":-gold:", ":-gp:", ":-grass-seeds:", ":-hammer:", ":-hat:", ":-iron-ore:", ":-kamina-shades:", ":-kiwi:", ":-knife:", ":-knitting-needles:", ":-log:", ":-lumber:", ":-mash-book:", ":-mash-complete-series:", ":-mash-good-seasons:", ":-mash-movie:", ":-mash-season-1:", ":-mash-season-2:", ":-mash-season-3:", ":-mash-season-4:", ":-mash-season-5:", ":-mash-season-6:", ":-mash-season-7:", ":-mash-season-8:", ":-mash-season-9:", ":-mash-season-10:", ":-mash-season-11:", ":-mash-ultimate-collection:", ":-mushroom:", ":-orange:", ":-pants:", ":-raw-diamond:", ":-raw-emerald:", ":-raw-ruby:", ":-raw-sapphire:", ":-raw-tanzanite:", ":-ruby:", ":-sapphire:", ":-shears:", ":-shirt:", ":-shoes:", ":-shurt:", ":-sockmeister-challenge-coin:", ":-socks:", ":-tanzanite:", ":-top-hat:", ":-wheat-seeds:", ":-wool:", ":-wurlitzer-jukebox:", ":-iron:", ":-rock:", ":-saw:", ":-acorn:", ":-banana-bread:", ":-bone-dust:", ":-bone:", ":-bread:", ":-brick:", ":-cake:", ":-carrot-cake:", ":-cat-hat:", ":-chisel:", ":-clay:", ":-cloth:", ":-coal-dust:", ":-cotton:", ":-diamond-dust:", ":-egg:", ":-emerald-dust:", ":-fishhook:", ":-fishing-rod:", ":-flax:", ":-flour:", ":-fruit-salad:", ":-glass:", ":-glue:", ":-goldwire:", ":-ironwire:", ":-ladder:", ":-loom:", ":-mandrel:", ":-onion:", ":-pickaxe:", ":-potato:", ":-pottery-wheel:", ":-rolling-mill:", ":-ruby-dust:", ":-salt:", ":-sand:", ":-needle:", ":-pot:", ":-sugarcane:", ":-vessel:", ":-water:", ":-wheel:", ":-yarn:", ":-trowel:", ":-sapphire-dust:", ":-tanzanite-dust:", ":-spinning-wheel:", ":-wheat:", ":-thread:", ":-sugar:", ":-stick:", ":-scythe:", ":-shovel:", ":-blahaj:", ":-file:", ":-firewood:", ":-gold-wire:", ":-hairball:", ":-iron-wire:", ":-lapidary-wheel:", ":-range:", ":-stone-mill:", ":-bonsai:"];
 
-async function getTextWithAltText(elementHandle: any) {
-  const content = await elementHandle.evaluate((element: any) => {
-    let textContent = element.textContent;
-    for (const child of element.children) {
-      if (child.tagName === 'IMG') {
-        const altElement = child.querySelector('[alt]'); // Adjust if alt text stored differently
-        textContent += altElement?.alt || ''; // Append alt text or empty string
-      }
-    }
-    return textContent;
-  });
-  return content;
-}
-
 async function waitForNewMessage(page: any, start: number) {
   return new Promise(async (resolve) => {
     const message = await page.evaluate(async () => {
@@ -24,14 +10,7 @@ async function waitForNewMessage(page: any, start: number) {
       console.log(messages);
       let message = Array.from(messages).pop();
       if (message) {
-        // find the last message that contains @kieran
-        for (let i = messages.length - 1; i >= 0; i--) {
-          if ((await getTextWithAltText(messages[i])).includes(`: -aftermash-complete-series:`)) {
-            message = messages[i];
-            break;
-          }
-        }
-        return getTextWithAltText(message);
+        return message.textContent;
       }
     });
 

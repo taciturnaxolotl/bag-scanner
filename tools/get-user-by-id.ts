@@ -67,6 +67,6 @@ if (ids.length > 1) {
   timezone: ${user.user.tz ? `${user.user.tz} - ${user.user.tz_label}` : "No timezone provided"}
   ${user.user.deleted ? "user.user has been deleted :(" : `User is active & ${user.user.is_admin ? (user.user.is_owner ? "User is an Admin and a owner" : "User is an Admin") : "User is not an admin"}`}
   ---`);
+  }
 }
-
 outro("Bye!");

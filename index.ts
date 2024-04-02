@@ -3,22 +3,29 @@ import { loginToSlack } from './utils/login-to-slack';
 
 async function waitForNewMessage(page: any, start: number) {
   return new Promise(async (resolve) => {
-    const message = await page.evaluate(() => {
-      const messages = document.querySelectorAll('.p-rich_text_section');
+    const message = await page.evaluate(async () => {
+      const messages = document.querySelectorAll('[data-qa="message_content"]');
+      console.log(messages);
       let message = Array.from(messages).pop();
       if (message) {
-        // find the last message that contains @kieran
-        for (let i = messages.length - 1; i >= 0; i--) {
-          if (messages[i].textContent?.includes('@kieran ran /use')) {
-            message = messages[i];
-            break;
-          }
+        // get the text content of the message and the alt text of any image tags in the message
+        let newMessage;
+        const images = message.querySelectorAll('img');
+        if (images.length) {
+          newMessage = {
+            textContent: message.textContent,
+            images: Array.from(images).map((img: any) => img.alt)
+          };
+        } else {
+          newMessage = {
+            textContent: message.textContent
+          };
         }
-        return message.textContent;
+        return newMessage;
       }
     });
 
-    if (message && ((message.includes('What you') || message.includes("nothing good here") || message.includes("Uncertainty is a part of life")) && !message.includes(':loading-dots:'))) {
+    if (message) {
       resolve(message);
     } else if (start + 10000 < Date.now()) {
       resolve('timeout after 30 seconds of waiting for a new message.');
@@ -42,13 +49,13 @@ async function waitForNewMessage(page: any, start: number) {
     async function sendCommand(command: string) {
       await page.click('[data-qa="message_input"]');
       await page.keyboard.type(command);
+      await new Promise(r => setTimeout(r, 1000));
       await page.keyboard.press('Enter');
     }
 
-    // await sendCommand('Mining time!');
+    await sendCommand('Crafting time!');
     await new Promise(r => setTimeout(r, 2000));
 
-    let i = 0;
     let running = true;
 
     // Listen for SIGINT event
@@ -59,26 +66,17 @@ async function waitForNewMessage(page: any, start: number) {
       browser.close();
     });
 
-    while (true) {
-      console.log('Sending command to use pickaxe #' + i);
-      await sendCommand('/use pickaxe');
+    for (let i = 0; i < 10 && running; i++) {
+      await sendCommand('/craft :-iron_ore: :-coal: :-furnace:');
 
       await new Promise(r => setTimeout(r, 1000));
 
       await waitForNewMessage(page, Date.now()).then((message: any) => {
-        // regex for  @kieran ran /use pickaxe:You find a spot that looks promising and start breaking things apart with heavy swings of your pickaxe.Not much here, but you take a solid-looking rock as a consolation prize.What you got: x1  Rock (edited)
-        const regex = /What you (got|lost): x(\d+) (.*?)(?= What|$)(?= \(edited\)|$)?/g;
+        // click the data-qa-action-id="complete-crafting"
+        page.click('[data-qa-action-id="complete-crafting"]');
 
-        const match = regex.exec(message);
-
-        if (match !== null) {
-          console.log(`${new Date().toLocaleString()} - ${match[1]} x${match[2]} ${match[3]} ${match[4] ? `${match[4]} x${match[5]} ${match[6]}` : ''}`);
-        } else {
-          console.log(message);
-        }
+        console.log(message);
       });
-
-      i++;
     }
 
   } catch (error) {

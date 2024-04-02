@@ -1,0 +1,726 @@
+Sending item command to use item: :-aftermash-complete-series:
+{
+  textContent: "Here's  AfterMASH The Complete Series: A series better left incomplete. But hey, you did it anyway! - Drawn by Jeijii",
+  images: [ ":-aftermash-complete-series:" ],
+}
+Sending item command to use item: :-aftermash-season-1:
+{
+  textContent: "Here's  AfterMASH Season 1: Why do you own this? It is… not good. - Drawn by Jeijii",
+  images: [ ":-aftermash-season-1:" ],
+}
+Sending item command to use item: :-aftermash-season-2:
+{
+  textContent: "Here's  AfterMASH Season 2: Seriously, how did this get renewed for a second season. - Drawn by Jeijii",
+  images: [ ":-aftermash-season-2:" ],
+}
+Sending item command to use item: :-aluminum-ore:
+{
+  textContent: "Here's  Aluminum Ore: The technical term is \"bauxite\", apparently. - Drawn by Acon",
+  images: [ ":-aluminum-ore:" ],
+}
+Sending item command to use item: :-aluminum:
+{
+  textContent: "Ways to make this: ~  → x1  Aluminum",
+  images: [ ":-coal:", ":-aluminum-ore:", ":-furnace:", ":-aluminum:" ],
+}
+Sending item command to use item: :-anvil:
+{
+  textContent: "Ways to make this: ~  → x1  Anvil",
+  images: [ ":-iron:", ":-iron:", ":-iron:", ":-clay:", ":-coal:", ":-furnace:", ":-anvil:" ],
+}
+Sending item command to use item: :-apple:
+{
+  textContent: "Here's  Apple: According to legend, eating one of these daily is supposed to ward off medical professionals - Drawn by Eleeza",
+  images: [ ":-apple:" ],
+}
+Sending item command to use item: :-axe:
+{
+  textContent: "Ways to make this: ~  → x1  Axe",
+  images: [ ":-stick:", ":-iron:", ":-hammer:", ":-anvil:", ":-axe:" ],
+}
+Sending item command to use item: :-banana:
+{
+  textContent: "Here's  Banana: How are these so cheap? They don't even grow locally. Economies of scale are freaky. - Drawn by Jeijii",
+  images: [ ":-banana:" ],
+}
+Sending item command to use item: :-carrot:
+{
+  textContent: "Here's  Carrot: They don't actually improve your vision, but you should eat them anyway. - Drawn by Acon",
+  images: [ ":-carrot:" ],
+}
+Sending item command to use item: :-coal:
+{
+  textContent: "Here's  Coal: Seriously, we need to stop burning this stuff. - Drawn by Acon",
+  images: [ ":-coal:" ],
+}
+Sending item command to use item: :-coconut:
+{
+  textContent: "Here's  Coconut: Look out below!! - Drawn by Jeijii",
+  images: [ ":-coconut:" ],
+}
+Sending item command to use item: :-cool-shoes:
+{
+  textContent: "Ways to make this: → x1  Cool Shoes",
+  images: [ ":-sapphire-dust:", ":-glue:", ":-shoes:", ":-cool-shoes:" ],
+}
+Sending item command to use item: :-diamond:
+{
+  textContent: "Ways to make this: ~  → x1  Diamond",
+  images: [ ":-raw-diamond:", ":-lapidary-wheel:", ":-diamond:" ],
+}
+Sending item command to use item: :-dinoisseur-challenge-coin:
+{
+  textContent: "Here's  Dinoisseur Challenge Coin: Congratulations, now you know how to make a pull request! - Drawn by Acon",
+  images: [ ":-dinoisseur-challenge-coin:" ],
+}
+Sending item command to use item: :-emerald:
+{
+  textContent: "Ways to make this: ~  → x1  Emerald",
+  images: [ ":-raw-emerald:", ":-lapidary-wheel:", ":-emerald:" ],
+}
+Sending item command to use item: :-fancy-pants:
+{
+  textContent: "Ways to make this: → x1  Fancy Pants",
+  images: [ ":-emerald-dust:", ":-glue:", ":-pants:", ":-fancy-pants:" ],
+}
+Sending item command to use item: :-fashionable-shirt:
+{
+  textContent: "Ways to make this: → x1  Fashionable Shirt",
+  images: [ ":-ruby-dust:", ":-glue:", ":-shirt:", ":-fashionable-shirt:" ],
+}
+Sending item command to use item: :-fish:
+{
+  textContent: "Here's  Fish: This highly-edible creature is literally born to swim. - Drawn by Jeijii",
+  images: [ ":-fish:" ],
+}
+Sending item command to use item: :-fish-hat:
+{
+  textContent: "Here's  Fish Hat: A fashion brought to you by Orcas. - Drawn by Jeijii",
+  images: [ ":-fish-hat:" ],
+}
+Sending item command to use item: :-furnace:
+{
+  textContent: "Ways to make this: → x1  Furnace",
+  images: [ ":-rock:", ":-rock:", ":-rock:", ":-rock:", ":-rock:", ":-rock:", ":-rock:", ":-rock:",
+    ":-furnace:"
+  ],
+}
+Sending item command to use item: :-gold-ore:
+{
+  textContent: "Here's  Gold Ore: Somewhere in this lump there's a bunch of shiny expensive yellow stuff. - Drawn by Elena",
+  images: [ ":-gold-ore:" ],
+}
+Sending item command to use item: :-gold:
+{
+  textContent: "Ways to make this: ~  → x1  Gold",
+  images: [ ":-coal:", ":-gold-ore:", ":-furnace:", ":-gold:" ],
+}
+Sending item command to use item: :-gp:
+{
+  textContent: "Here's  gp: Gold pieces? Game points? Nobody knows what it stands for. But it's money. - Drawn by Jagex",
+  images: [ ":-gp:" ],
+}
+Sending item command to use item: :-grass-seeds:
+{
+  textContent: "Here's  Grass Seeds: Any good lawn begins with these things. - Drawn by Acon",
+  images: [ ":-grass-seeds:" ],
+}
+Sending item command to use item: :-hammer:
+{
+  textContent: "Ways to make this: → x1  Hammer",
+  images: [ ":-stick:", ":-iron:", ":-hammer:" ],
+}
+Sending item command to use item: :-hat:
+{
+  textContent: "Ways to make this: ~  → x1  Hat",
+  images: [ ":-yarn:", ":-knitting-needles:", ":-hat:" ],
+}
+Sending item command to use item: :-iron-ore:
+{
+  textContent: "Here's  Iron Ore: This stuff will be a lot more useful if you can find a way to refine it. - Drawn by Jeijii",
+  images: [ ":-iron-ore:" ],
+}
+Sending item command to use item: :-kamina-shades:
+{
+  textContent: "Here's  Kamina's Shades: Believe in the Orpheus that believes in you! - Drawn by Jeijii",
+  images: [ ":-kamina-shades:" ],
+}
+Sending item command to use item: :-kiwi:
+{
+  textContent: "Here's  Kiwi: You should really eat the skin, it's the most nutritious part. - Drawn by Jeijii",
+  images: [ ":-kiwi:" ],
+}
+Sending item command to use item: :-knife:
+{
+  textContent: "Ways to make this: ~  → x1  Knife",
+  images: [ ":-stick:", ":-iron:", ":-hammer:", ":-anvil:", ":-knife:" ],
+}
+Sending item command to use item: :-knitting-needles:
+{
+  textContent: "Ways to make this: ~  → x1  Knitting Needles",
+  images: [ ":-stick:", ":-stick:", ":-knife:", ":-knitting-needles:" ],
+}
+Sending item command to use item: :-log:
+{
+  textContent: "Here's  Log: A good thick log. What more could you want from a tree? - Drawn by Acon",
+  images: [ ":-log:" ],
+}
+Sending item command to use item: :-lumber:
+{
+  textContent: "Ways to make this: ~  → x1  Lumber",
+  images: [ ":-log:", ":-saw:", ":-lumber:" ],
+}
+Sending item command to use item: :-mash-book:
+{
+  textContent: "Here's  MASH The Original Novel: An unusual book from an unusual time, with a puzzling number of spin-offs. - Drawn by Jeijii",
+  images: [ ":-mash-book:" ],
+}
+Sending item command to use item: :-mash-complete-series:
+{
+  textContent: "Here's  MASH The Complete Series: You really only need the first three seasons, but it's nice to have a full set. - Drawn by Jeijii",
+  images: [ ":-mash-complete-series:" ],
+}
+Sending item command to use item: :-mash-good-seasons:
+{
+  textContent: "Here's  MASH The Good Seasons: Sorry BJ, sorry Colonel Potter… Henry and Trapper were better. - Drawn by Elena",
+  images: [ ":-mash-good-seasons:" ],
+}
+Sending item command to use item: :-mash-movie:
+{
+  textContent: "Here's  MASH The Movie: This film has not aged well. It was a different time. - Drawn by Jeijii",
+  images: [ ":-mash-movie:" ],
+}
+Sending item command to use item: :-mash-season-1:
+{
+  textContent: "Here's  MASH Season 1: Korea, 1950 (a hundred years ago) - Drawn by Elena",
+  images: [ ":-mash-season-1:" ],
+}
+Sending item command to use item: :-mash-season-2:
+{
+  textContent: "Here's  MASH Season 2: Includes essential classics like \"5 O'Clock Charlie\" and \"George\". - Drawn by Elena",
+  images: [ ":-mash-season-2:" ],
+}
+Sending item command to use item: :-mash-season-3:
+{
+  textContent: "Here's  MASH Season 3: Abyssinia, Henry. - Drawn by Elena",
+  images: [ ":-mash-season-3:" ],
+}
+Sending item command to use item: :-mash-season-4:
+{
+  textContent: "Here's  MASH Season 4: Now Trapper's gone too?? That's it. I'm out. - Drawn by Elena",
+  images: [ ":-mash-season-4:" ],
+}
+Sending item command to use item: :-mash-season-5:
+{
+  textContent: "Here's  MASH Season 5: The last season with Larry Linville. - Drawn by Elena",
+  images: [ ":-mash-season-5:" ],
+}
+Sending item command to use item: :-mash-season-6:
+{
+  textContent: "Here's  MASH Season 5: The last season with Larry Linville. - Drawn by Elena",
+  images: [ ":-mash-season-5:" ],
+}
+Sending item command to use item: :-mash-season-7:
+{
+  textContent: "Here's  MASH Season 7: \"Point of View\" is a remarkably innovative episode in an otherwise unremarkable season. - Drawn by Elena",
+  images: [ ":-mash-season-7:" ],
+}
+Sending item command to use item: :-mash-season-8:
+{
+  textContent: "Here's  MASH Season 8: Radar is gone, Klinger wears normal uniforms, the show drags on. - Drawn by Elena",
+  images: [ ":-mash-season-8:" ],
+}
+Sending item command to use item: :-mash-season-9:
+{
+  textContent: "Here's  MASH Season 8: Radar is gone, Klinger wears normal uniforms, the show drags on. - Drawn by Elena",
+  images: [ ":-mash-season-8:" ],
+}
+Sending item command to use item: :-mash-season-10:
+{
+  textContent: "Here's  MASH Season 10: Laurence Fishburne makes an appearance, so… that's something I guess. - Drawn by Elena",
+  images: [ ":-mash-season-10:" ],
+}
+Sending item command to use item: :-mash-season-11:
+{
+  textContent: "Here's  MASH Season 11: Goodbye, farewell, amen. - Drawn by Elena",
+  images: [ ":-mash-season-11:" ],
+}
+Sending item command to use item: :-mash-ultimate-collection:
+{
+  textContent: "Here's  MASH The Ultimate Collection: Wow. You did it! Alan Alda salutes your efforts. And as you know, he doesn't salute very often. - Drawn by Jeijii",
+  images: [ ":-mash-ultimate-collection:" ],
+}
+Sending item command to use item: :-mushroom:
+{
+  textContent: "Here's  Mushroom: Anyone who makes the \"fun guy\" joke will be summarily fired. - Drawn by Elena",
+  images: [ ":-mushroom:" ],
+}
+Sending item command to use item: :-orange:
+{
+  textContent: "Here's  Mushroom: Anyone who makes the \"fun guy\" joke will be summarily fired. - Drawn by Elena",
+  images: [ ":-mushroom:" ],
+}
+Sending item command to use item: :-pants:
+{
+  textContent: "Ways to make this::-thread: ~ :-shears: → x1  Pants",
+  images: [ ":-cloth:", ":-cloth:", ":-cloth:", ":-needle:", ":-pants:" ],
+}
+Sending item command to use item: :-raw-diamond:
+{
+  textContent: "Here's  Raw Diamond: A diamond, in the rough. Literally. - Drawn by Acon",
+  images: [ ":-raw-diamond:" ],
+}
+Sending item command to use item: :-raw-emerald:
+{
+  textContent: "Here's  Raw Emerald: It may look sour-apple flavored, but it's not. Trust me. - Drawn by Acon",
+  images: [ ":-raw-emerald:" ],
+}
+Sending item command to use item: :-raw-ruby:
+{
+  textContent: "Here's  Raw Ruby: Is it just me or does this ugly rock look kind of… angry? - Drawn by Elena",
+  images: [ ":-raw-ruby:" ],
+}
+Sending item command to use item: :-raw-sapphire:
+{
+  textContent: "Here's  Raw Sapphire: Somewhere in here is a beautiful sparkly blue thing. - Drawn by Acon",
+  images: [ ":-raw-sapphire:" ],
+}
+Sending item command to use item: :-raw-tanzanite:
+{
+  textContent: "Here's  Raw Tanzanite: Once thought to be found only in Tanzania, a rich deposit was recently found in the Hack Club Slack. - Drawn by Elena",
+  images: [ ":-raw-tanzanite:" ],
+}
+Sending item command to use item: :-ruby:
+{
+  textContent: "Ways to make this: ~  → x1  Ruby",
+  images: [ ":-raw-ruby:", ":-lapidary-wheel:", ":-ruby:" ],
+}
+Sending item command to use item: :-sapphire:
+{
+  textContent: "Ways to make this: ~  → x1  Sapphire",
+  images: [ ":-raw-sapphire:", ":-lapidary-wheel:", ":-sapphire:" ],
+}
+Sending item command to use item: :-shears:
+{
+  textContent: "Ways to make this: → x1  Shears",
+  images: [ ":-knife:", ":-knife:", ":-shears:" ],
+}
+Sending item command to use item: :-shirt:
+{
+  textContent: "Ways to make this: ~  → x1  Shirt",
+  images: [ ":-thread:", ":-cloth:", ":-cloth:", ":-shears:", ":-needle:", ":-shirt:" ],
+}
+Sending item command to use item: :-shoes:
+{
+  textContent: "Here's  Shoes: Don't worry feet, you're safe in here. - Drawn by Elena",
+  images: [ ":-shoes:" ],
+}
+Sending item command to use item: :-shurt:
+{
+  textContent: "Ways to make this::-tanzanite-dust: ~  → x1  Shurt",
+  images: [ ":-yarn:", ":-glue:", ":-cloth:", ":-cloth:", ":-thread:", ":-thread:", ":-knitting-needles:",
+    ":-needle:", ":-shurt:"
+  ],
+}
+Sending item command to use item: :-sockmeister-challenge-coin:
+{
+  textContent: "Here's  Sockmeister Challenge Coin: The socks embossed on this challenge coin are a poetic complement to the piece of lint stuck to it from your pocket. - Drawn by Jeijii",
+  images: [ ":-sockmeister-challenge-coin:" ],
+}
+Sending item command to use item: :-socks:
+{
+  textContent: "Ways to make this: ~  → x1  Socks",
+  images: [ ":-yarn:", ":-knitting-needles:", ":-socks:" ],
+}
+Sending item command to use item: :-tanzanite:
+{
+  textContent: "Ways to make this: ~  → x1  Tanzanite",
+  images: [ ":-raw-tanzanite:", ":-lapidary-wheel:", ":-tanzanite:" ],
+}
+Sending item command to use item: :-top-hat:
+{
+  textContent: "Ways to make this::-wool: ~  → x1  Top Hat",
+  images: [ ":-coal-dust:", ":-tanzanite-dust:", ":-glue:", ":-needle:", ":-top-hat:" ],
+}
+Sending item command to use item: :-wheat-seeds:
+{
+  textContent: "Here's  Wheat Seeds: Looking to grow some wheat? Start with these. - Drawn by Acon",
+  images: [ ":-wheat-seeds:" ],
+}
+Sending item command to use item: :-wool:
+{
+  textContent: "Here's  Wool: \"Wooly\" would be an accurate but maybe unhelpful description. - Drawn by Jeijii",
+  images: [ ":-wool:" ],
+}
+Sending item command to use item: :-wurlitzer-jukebox:
+{
+  textContent: "Here's  1982 Wurlitzer Jukebox: Alec Watson could probably tell you a lot about this object. - Drawn by Elena",
+  images: [ ":-wurlitzer-jukebox:" ],
+}
+Sending item command to use item: :-iron:
+{
+  textContent: "Ways to make this: ~  → x1  Iron",
+  images: [ ":-coal:", ":-iron-ore:", ":-furnace:", ":-iron:" ],
+}
+Sending item command to use item: :-rock:
+{
+  textContent: "Here's  Rock: It's a rock. - Drawn by Eleeza",
+  images: [ ":-rock:" ],
+}
+Sending item command to use item: :-saw:
+{
+  textContent: "Ways to make this: ~  → x1  Saw",
+  images: [ ":-iron:", ":-lumber:", ":-hammer:", ":-anvil:", ":-file:", ":-saw:" ],
+}
+Sending item command to use item: :-acorn:
+{
+  textContent: "Here's  Acorn: Their fancy berets make these the most fashionable seeds of all. - Drawn by Elena",
+  images: [ ":-acorn:" ],
+}
+Sending item command to use item: :-banana-bread:
+{
+  textContent: "Ways to make this: ~  → x1 :-vessel: Vessel, x1  Banana Bread",
+  images: [ ":-water:", ":-flour:", ":-salt:", ":-firewood:", ":-banana:", ":-range:", ":-banana-bread:"
+  ],
+}
+Sending item command to use item: :-bone-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Bone Dust ~  → x1  Bone Dust",
+  images: [ ":-bone:", ":-hammer:", ":-bone-dust:", ":-bone:", ":-stone-mill:", ":-bone-dust:"
+  ],
+}
+Sending item command to use item: :-bone:
+{
+  textContent: "Here's  Bone: You already have 206 of these. Do you really need more? - Drawn by Jeijii",
+  images: [ ":-bone:" ],
+}
+Sending item command to use item: :-bread:
+{
+  textContent: "Ways to make this: ~  → x1  Bread, x1  Vessel",
+  images: [ ":-water:", ":-flour:", ":-salt:", ":-firewood:", ":-range:", ":-bread:", ":-vessel:"
+  ],
+}
+Sending item command to use item: :-brick:
+{
+  textContent: "Ways to make this: ~  → x1  Brick",
+  images: [ ":-clay:", ":-furnace:", ":-brick:" ],
+}
+Sending item command to use item: :-cake:
+{
+  textContent: "Ways to make this: ~  → x1  Brick",
+  images: [ ":-clay:", ":-furnace:", ":-brick:" ],
+}
+Sending item command to use item: :-carrot-cake:
+{
+  textContent: "Ways to make this: ~  → x1  Vessel, x1  Carrot Cake",
+  images: [ ":-water:", ":-flour:", ":-salt:", ":-firewood:", ":-sugar:", ":-egg:", ":-carrot:",
+    ":-range:", ":-vessel:", ":-carrot-cake:"
+  ],
+}
+Sending item command to use item: :-cat-hat:
+{
+  textContent: "Here's  Cat Hat: Meow! /ᐠ｡ꞈ｡ᐟ\\ - Drawn by Jeijii",
+  images: [ ":-cat-hat:" ],
+}
+Sending item command to use item: :-chisel:
+{
+  textContent: "Ways to make this: ~  → x1  Chisel",
+  images: [ ":-iron:", ":-hammer:", ":-anvil:", ":-chisel:" ],
+}
+Sending item command to use item: :-clay:
+{
+  textContent: "Here's  Clay: Like mud, but better! - Drawn by Elena",
+  images: [ ":-clay:" ],
+}
+Sending item command to use item: :-cloth:
+{
+  textContent: "Ways to make this: ~  → x1  Cloth",
+  images: [ ":-thread:", ":-thread:", ":-thread:", ":-loom:", ":-cloth:" ],
+}
+Sending item command to use item: :-coal-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Coal Dust",
+  images: [ ":-coal:", ":-stone-mill:", ":-coal-dust:" ],
+}
+Sending item command to use item: :-cotton:
+{
+  textContent: "Here's  Cotton: The terrestrial cousin of clouds. - Drawn by Jeijii",
+  images: [ ":-cotton:" ],
+}
+Sending item command to use item: :-diamond-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Diamond Dust ~  → x1  Diamond Dust",
+  images: [ ":-raw-diamond:", ":-stone-mill:", ":-diamond-dust:", ":-diamond:", ":-stone-mill:",
+    ":-diamond-dust:"
+  ],
+}
+Sending item command to use item: :-egg:
+{
+  textContent: "Here's  Egg: An essential ingredient for creating chickens. - Drawn by Elena",
+  images: [ ":-egg:" ],
+}
+Sending item command to use item: :-emerald-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Emerald Dust ~  → x1  Emerald Dust",
+  images: [ ":-raw-emerald:", ":-stone-mill:", ":-emerald-dust:", ":-emerald:", ":-stone-mill:",
+    ":-emerald-dust:"
+  ],
+}
+Sending item command to use item: :-fishhook:
+{
+  textContent: "Ways to make this: ~  → x1  Fishhook",
+  images: [ ":-needle:", ":-hammer:", ":-mandrel:", ":-fishhook:" ],
+}
+Sending item command to use item: :-fishing-rod:
+{
+  textContent: "Ways to make this: → x1  Fishing Rod",
+  images: [ ":-stick:", ":-fishhook:", ":-thread:", ":-fishing-rod:" ],
+}
+Sending item command to use item: :-flax:
+{
+  textContent: "Here's  Flax: One day, all these fibers will be cloth. But for now they are fibers. - Drawn by Acon",
+  images: [ ":-flax:" ],
+}
+Sending item command to use item: :-flour:
+{
+  textContent: "Ways to make this: ~  → x1  Flour",
+  images: [ ":-wheat:", ":-stone-mill:", ":-flour:" ],
+}
+Sending item command to use item: :-fruit-salad:
+{
+  textContent: "Ways to make this: ~  → x1  Flour",
+  images: [ ":-wheat:", ":-stone-mill:", ":-flour:" ],
+}
+Sending item command to use item: :-glass:
+{
+  textContent: "Ways to make this: ~  → x1  Glass",
+  images: [ ":-coal:", ":-sand:", ":-furnace:", ":-glass:" ],
+}
+Sending item command to use item: :-glue:
+{
+  textContent: "Ways to make this: ~  → x1  Glue, x1  Vessel",
+  images: [ ":-water:", ":-firewood:", ":-bone-dust:", ":-pot:", ":-range:", ":-glue:", ":-vessel:"
+  ],
+}
+Sending item command to use item: :-goldwire:
+{
+  textContent: "Ways to make this: ~  → x1  Glue, x1  Vessel",
+  images: [ ":-water:", ":-firewood:", ":-bone-dust:", ":-pot:", ":-range:", ":-glue:", ":-vessel:"
+  ],
+}
+Sending item command to use item: :-ironwire:
+{
+  textContent: "Ways to make this: ~  → x1  Glue, x1  Vessel",
+  images: [ ":-water:", ":-firewood:", ":-bone-dust:", ":-pot:", ":-range:", ":-glue:", ":-vessel:"
+  ],
+}
+Sending item command to use item: :-ladder:
+{
+  textContent: "Ways to make this: ~  → x1  Ladder",
+  images: [ ":-glue:", ":-stick:", ":-stick:", ":-stick:", ":-lumber:", ":-lumber:", ":-saw:",
+    ":-ladder:"
+  ],
+}
+Sending item command to use item: :-loom:
+{
+  textContent: "Ways to make this: ~  → x1  Loom",
+  images: [ ":-stick:", ":-lumber:", ":-glue:", ":-saw:", ":-loom:" ],
+}
+Sending item command to use item: :-mandrel:
+{
+  textContent: "Ways to make this: ~  → x1  Mandrel",
+  images: [ ":-iron:", ":-hammer:", ":-anvil:", ":-mandrel:" ],
+}
+Sending item command to use item: :-onion:
+{
+  textContent: "Here's  Onion: The beauty of this foodstuff is enough to bring you to tears. Or maybe it's the sulfur. I don't know. - Drawn by Acon",
+  images: [ ":-onion:" ],
+}
+Sending item command to use item: :-pickaxe:
+{
+  textContent: "Ways to make this: ~  → x1  Pickaxe",
+  images: [ ":-stick:", ":-iron:", ":-hammer:", ":-anvil:", ":-pickaxe:" ],
+}
+Sending item command to use item: :-potato:
+{
+  textContent: "Here's  Potato: Wow, a potato. If the internet is to be believed you can take pictures with this thing. - Drawn by Acon",
+  images: [ ":-potato:" ],
+}
+Sending item command to use item: :-pottery-wheel:
+{
+  textContent: "Ways to make this: ~  → x1  Pottery Wheel",
+  images: [ ":-stick:", ":-lumber:", ":-wheel:", ":-glue:", ":-aluminum:", ":-hammer:", ":-anvil:",
+    ":-saw:", ":-pottery-wheel:"
+  ],
+}
+Sending item command to use item: :-rolling-mill:
+{
+  textContent: "Ways to make this: ~  → x1  Rolling Mill",
+  images: [ ":-iron:", ":-iron:", ":-iron:", ":-hammer:", ":-anvil:", ":-chisel:", ":-rolling-mill:"
+  ],
+}
+Sending item command to use item: :-ruby-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Ruby Dust ~  → x1  Ruby Dust",
+  images: [ ":-raw-ruby:", ":-stone-mill:", ":-ruby-dust:", ":-ruby:", ":-stone-mill:", ":-ruby-dust:"
+  ],
+}
+Sending item command to use item: :-salt:
+{
+  textContent: "Here's  Salt: Best to avoid this stuff if you happen to be a slug. - Drawn by Elena",
+  images: [ ":-salt:" ],
+}
+Sending item command to use item: :-sand:
+{
+  textContent: "Here's  Sand: It's coarse and rough and irritating and it gets everywhere. - Drawn by Acon",
+  images: [ ":-sand:" ],
+}
+Sending item command to use item: :-needle:
+{
+  textContent: "Ways to make this: ~  → x5  Needle",
+  images: [ ":-iron-wire:", ":-hammer:", ":-anvil:", ":-chisel:", ":-needle:" ],
+}
+Sending item command to use item: :-pot:
+{
+  textContent: "Ways to make this: ~  → x1  Pot",
+  images: [ ":-iron:", ":-hammer:", ":-anvil:", ":-pot:" ],
+}
+Sending item command to use item: :-sugarcane:
+{
+  textContent: "Here's  Sugarcane: Despite the name, it doesn't work great as a cane. - Drawn by Elena",
+  images: [ ":-sugarcane:" ],
+}
+Sending item command to use item: :-vessel:
+{
+  textContent: "Ways to make this: ~  → x1  Bread, x1  Vessel ~  → x1  Vessel, x1  Banana Bread ~  → x1  Vessel, x1  Cake ~  → x1  Vessel, x1  Carrot Cake ~  → x1  Glue, x1  Vessel ~  → x1  Vessel, x1  Sugar ~  → x1  Vessel",
+  images: [
+    ":-water:", ":-flour:", ":-salt:", ":-firewood:", ":-range:", ":-bread:", ":-vessel:", ":-water:",
+    ":-flour:", ":-salt:", ":-firewood:", ":-banana:", ":-range:", ":-vessel:", ":-banana-bread:",
+    ":-water:", ":-flour:", ":-salt:", ":-firewood:", ":-sugar:", ":-egg:", ":-range:", ":-vessel:",
+    ":-cake:", ":-water:", ":-flour:", ":-salt:", ":-firewood:", ":-sugar:", ":-egg:", ":-carrot:",
+    ":-range:", ":-vessel:", ":-carrot-cake:", ":-water:", ":-firewood:", ":-bone-dust:", ":-pot:",
+    ":-range:", ":-glue:", ":-vessel:", ":-water:", ":-sugarcane:", ":-pot:", ":-range:", ":-vessel:",
+    ":-sugar:", ":-clay:", ":-furnace:", ":-pottery-wheel:", ":-vessel:"
+  ],
+}
+Sending item command to use item: :-water:
+{
+  textContent: "Here's  Water: I can't believe how wet this stuff is! - Drawn by Jeijii",
+  images: [ ":-water:" ],
+}
+Sending item command to use item: :-wheel:
+{
+  textContent: "Ways to make this: ~  → x1  Wheel",
+  images: [ ":-lumber:", ":-glue:", ":-stick:", ":-stick:", ":-stick:", ":-saw:", ":-wheel:" ],
+}
+Sending item command to use item: :-yarn:
+{
+  textContent: "Ways to make this: ~  → x2  Yarn",
+  images: [ ":-wool:", ":-spinning-wheel:", ":-yarn:" ],
+}
+Sending item command to use item: :-trowel:
+{
+  textContent: "Here's  Trowel: A cute lil mini-shovel for digging cute lil mini-holes. - Drawn by Unknown",
+  images: [ ":-trowel:" ],
+}
+Sending item command to use item: :-sapphire-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Sapphire Dust ~  → x1  Sapphire Dust",
+  images: [ ":-raw-sapphire:", ":-stone-mill:", ":-sapphire-dust:", ":-sapphire:", ":-stone-mill:",
+    ":-sapphire-dust:"
+  ],
+}
+Sending item command to use item: :-tanzanite-dust:
+{
+  textContent: "Ways to make this: ~  → x1  Tanzanite Dust ~  → x1  Tanzanite Dust",
+  images: [ ":-raw-tanzanite:", ":-stone-mill:", ":-tanzanite-dust:", ":-tanzanite:", ":-stone-mill:",
+    ":-tanzanite-dust:"
+  ],
+}
+Sending item command to use item: :-spinning-wheel:
+{
+  textContent: "Ways to make this: ~  → x1  Spinning Wheel",
+  images: [ ":-lumber:", ":-wheel:", ":-glue:", ":-hammer:", ":-saw:", ":-spinning-wheel:" ],
+}
+Sending item command to use item: :-wheat:
+{
+  textContent: "Here's  Wheat: Mmmmm, gluten! - Drawn by Elena",
+  images: [ ":-wheat:" ],
+}
+Sending item command to use item: :-thread:
+{
+  textContent: "Ways to make this: ~  → x4  Thread",
+  images: [ ":-flax:", ":-spinning-wheel:", ":-thread:" ],
+}
+Sending item command to use item: :-sugar:
+{
+  textContent: "Ways to make this: ~  → x1  Vessel, x1  Sugar",
+  images: [ ":-water:", ":-sugarcane:", ":-pot:", ":-range:", ":-vessel:", ":-sugar:" ],
+}
+Sending item command to use item: :-stick:
+{
+  textContent: "Ways to make this: ~  → x4  Stick",
+  images: [ ":-log:", ":-saw:", ":-stick:" ],
+}
+Sending item command to use item: :-scythe:
+{
+  textContent: "Ways to make this: → x1  Scythe",
+  images: [ ":-stick:", ":-knife:", ":-scythe:" ],
+}
+Sending item command to use item: :-shovel:
+{
+  textContent: "Ways to make this: ~  → x1  Shovel",
+  images: [ ":-stick:", ":-iron:", ":-hammer:", ":-anvil:", ":-shovel:" ],
+}
+Sending item command to use item: :-blahaj:
+{
+  textContent: "Here's  Blahaj: Duh-dum… duh-dum duh-dum… duhdumduhdumduhdumduhdum - Drawn by Elena",
+  images: [ ":-blahaj:" ],
+}
+Sending item command to use item: :-file:
+{
+  textContent: "Here's  Blahaj: Duh-dum… duh-dum duh-dum… duhdumduhdumduhdumduhdum - Drawn by Elena",
+  images: [ ":-blahaj:" ],
+}
+Sending item command to use item: :-firewood:
+{
+  textContent: "Ways to make this: ~  → x3  Firewood",
+  images: [ ":-log:", ":-axe:", ":-firewood:" ],
+}
+Sending item command to use item: :-gold-wire:
+{
+  textContent: "Ways to make this: ~  → x1  Gold Wire",
+  images: [ ":-gold:", ":-rolling-mill:", ":-gold-wire:" ],
+}
+Sending item command to use item: :-hairball:
+{
+  textContent: "Here's  Hairball: cough cough… blllech… bllleeeechhh… rourughROURouughhRUUUGH splat - Drawn by Acon",
+  images: [ ":-hairball:" ],
+}
+Sending item command to use item: :-iron-wire:
+{
+  textContent: "Ways to make this: ~  → x1  Iron Wire",
+  images: [ ":-iron:", ":-rolling-mill:", ":-iron-wire:" ],
+}
+Sending item command to use item: :-lapidary-wheel:
+{
+  textContent: "Ways to make this: → x1  Lapidary Wheel",
+  images: [ ":-diamond-dust:", ":-glue:", ":-spinning-wheel:", ":-lapidary-wheel:" ],
+}
+Sending item command to use item: :-range:
+{
+  textContent: "Ways to make this: → x1  Range",
+  images: [ ":-iron:", ":-brick:", ":-brick:", ":-brick:", ":-brick:", ":-brick:", ":-brick:",
+    ":-brick:", ":-brick:", ":-range:"
+  ],
+}
+Sending item command to use item: :-stone-mill:
+{
+  textContent: "Ways to make this: ~  → x1  Stone Mill",
+  images: [ ":-lumber:", ":-rock:", ":-rock:", ":-hammer:", ":-chisel:", ":-stone-mill:" ],
+}
+Sending item command to use item: :-bonsai:
+{
+  textContent: "Here's  Bonsai: An itsy-bitsy teeny-weeny woody-growy leafy-greeny. - Drawn by Jeijii",
+  images: [ ":-bonsai:" ],
+}
